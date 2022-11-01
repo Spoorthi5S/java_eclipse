@@ -1,4 +1,4 @@
-package com.xworkz.OneToMany.boot;
+package com.xworkz.OneToMany.thing;
 
 import com.xworkz.OneToMany.City;
 import com.xworkz.OneToMany.Country;
@@ -31,4 +31,6 @@ public class CountryRunner {
 
 	}
 
-}
+	}
+
+
