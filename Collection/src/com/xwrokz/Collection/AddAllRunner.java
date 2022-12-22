@@ -1064,6 +1064,7 @@ public class AddAllRunner {
 		damsInUttarPradesh.add("Dhandhraul");
 		damsInUttarPradesh.add("Dhenkwan");
 		damsInUttarPradesh.add("Dongia");
+		damsInUttarPradesh.add("pop");
 		System.out.println("Size of dams in UttarPradesh : "+damsInUttarPradesh.size());
 		
 		Collection<String> damsInIndia = new ArrayList<String>();
@@ -1134,16 +1135,25 @@ public class AddAllRunner {
 			System.out.println(element4.toLowerCase());
 		}
 			
-		System.out.println("Size before removing "+damsInIndia.size());
-		boolean removed = damsInIndia.removeIf(contains("P"));
-		System.out.println("removed P "+ removed);
-		System.out.println("contains P "+ contains );
-		System.out.println("Size after removing "+damsInIndia.size());
-	}
+		Iterator<String> remove = damsInIndia.iterator();
+		while (remove.hasNext()) {
+			String element = remove.next();
+			if (element.contains("P"))
+				System.out.println("Removing all dams it contains P " + element);
+			remove.remove();
+		}
 
-	private static Predicate<? super String> contains(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		Iterator<String> palindrome = damsInIndia.iterator();
+		while (palindrome.hasNext()) {
+			String element = (String) palindrome.next();
+			StringBuffer buffer = new StringBuffer(element);
+			buffer.reverse();
+			String reverse = buffer.toString();
+			if (element.equalsIgnoreCase(reverse)) {
+				System.out.println("Palindrome " + reverse);
+			}
+		}
+
 	
+	}
 }
