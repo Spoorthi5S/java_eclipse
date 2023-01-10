@@ -192,18 +192,20 @@ public class SpringConfiguration {
 	}
 
 	@Bean
-	public void weekDays() {
+	public  Collection weekDays() {
 		Collection<String> collection = new ArrayList<String>();
 		collection.add("monday");
 		collection.add("tuesday");
 		collection.add("wednesday");
 		collection.add("thrusday");
 		collection.add("friday");
-		System.out.println(collection.size());
+		//System.out.println(collection.size());
+		return collection;
+		
 	}
 
-	@Bean("Choky")
-	public void Chocolate() {
+	@Bean("choky")
+	public Map Chocolate() {
 		Map<String, Double> map = new HashMap();
 		map.put("DairyMilk", 100D);
 		map.put("Silk", 120D);
@@ -223,5 +225,7 @@ public class SpringConfiguration {
 		for (Entry<String, Double> entry : entries) {
 			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
+		return map;
 	}
+
 }

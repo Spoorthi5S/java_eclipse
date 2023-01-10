@@ -39,11 +39,10 @@ public class BeanRunner {
 	StringBuilder refOfBuilder = (StringBuilder) spring.getBean("box","light","wall","house",StringBuilder.class);
 	System.out.println(StringBuilder.class);
 	
-	Collection refOfCollection = spring.getBean(Collection.class);
-	System.out.println(Collection.class);
+	System.out.println("==============collection=============");
+	Collection refOfCollection = spring.getBean("weekDays",Collection.class);
+	System.out.println(refOfCollection);
 	
-	Map refOfMap = (Map) spring.getBean("Choky",Map.class);
-	System.out.println(Map.class);
 	
 	Laptop laptop = spring.getBean(Laptop.class);
 	System.out.println(laptop);
@@ -59,6 +58,9 @@ public class BeanRunner {
 	
 	Bedsheet sheet = spring.getBean(Bedsheet.class);
 	System.out.println(sheet);
+	
+	Map map=spring.getBean("choky",Map.class);
+	System.out.println(map);
 	
 	
 	}
