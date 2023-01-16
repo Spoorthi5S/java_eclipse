@@ -1,10 +1,7 @@
 package com.xworkz.crocodile.things;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import com.xworkz.crocodile.interfac.Browser;
 import com.xworkz.crocodile.interfac.Provider;
 @Component
 public class Airtel implements Provider {
