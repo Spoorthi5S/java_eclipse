@@ -33,6 +33,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<a href="egg.jsp">Egg</a>
+			<a href="CM.jsp">CM</a>
 		</div>
 
 
