@@ -41,14 +41,16 @@
 
 	<h1>Welcome to valentine data page</h1>
 	<c:forEach items="${error}" var="v">
-		<span style="color:red">${v.message }</span><br>
-		</c:forEach>
-	
+		<span style="color: red">${v.message }</span>
+		<br>
+	</c:forEach>
+
 	<form action="valentine" method="post">
 		<pre>
 		
-Name<input type="text" name="name" />
-ValentineName<input type="text" name="valentineName" />
+Name<input type="text" name="name" value="${dto.name}" />
+ValentineName<input type="text" name="valentineName"
+				value="${dto.valentineName}" />
 places<select name="places">
 <option value="">SELECT</option>
 <c:forEach items="${places}" var="p">

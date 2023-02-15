@@ -34,8 +34,8 @@ public class ValentineController {
 		System.out.println("running onValentine get method");
 		model.addAttribute("places", places);
 		model.addAttribute("gifts", gifts);
-	
-		return "Valentine.jsp";
+
+		return "Valentine";
 	}
 
 	@PostMapping
@@ -44,13 +44,14 @@ public class ValentineController {
 		Set<ConstraintViolation<ValentineDTO>> violations = valentineService.validateAndSave(dto);
 		if (violations.isEmpty()) {
 			System.out.println("no violation in controller go to success page");
-			return "ValentineSuccess.jsp";
+			return "ValentineSuccess";
 		}
 		model.addAttribute("places", places);
 		model.addAttribute("gifts", gifts);
 		model.addAttribute("error", violations);
+		model.addAttribute("dto", dto);
 		System.err.println("violation is controller");
-		return "Valentine.jsp";
+		return "Valentine";
 
 	}
 
